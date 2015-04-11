@@ -15,7 +15,7 @@
         </value>
         <next>
           <block type="variables_set" id="357" inline="true">
-            <field name="VAR">item</field>
+            <field name="VAR">landss</field>
             <value name="VALUE">
               <block type="sensor_spectrometer" id="392">
                 <field name="LIGHT">RED</field>
