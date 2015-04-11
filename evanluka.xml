@@ -14,26 +14,36 @@
           </block>
         </value>
         <next>
-          <block type="oled_cleardisplay" id="263">
+          <block type="variables_set" id="357" inline="true">
+            <field name="VAR">item</field>
+            <value name="VALUE">
+              <block type="sensor_spectrometer" id="392">
+                <field name="LIGHT">RED</field>
+              </block>
+            </value>
             <next>
-              <block type="oled_setcursor" id="329" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="346">
-                    <field name="NUM">50</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="353">
-                    <field name="NUM">0</field>
-                  </block>
-                </value>
+              <block type="oled_cleardisplay" id="263">
                 <next>
-                  <block type="oled_drawnumber" id="272" inline="true">
-                    <value name="NUMBER">
-                      <block type="variables_get" id="320">
-                        <field name="VAR">watersSs</field>
+                  <block type="oled_setcursor" id="329" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="346">
+                        <field name="NUM">50</field>
                       </block>
                     </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="353">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawnumber" id="272" inline="true">
+                        <value name="NUMBER">
+                          <block type="variables_get" id="320">
+                            <field name="VAR">watersSs</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
