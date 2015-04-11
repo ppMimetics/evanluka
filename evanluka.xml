@@ -43,22 +43,22 @@
                           </block>
                         </value>
                         <next>
-                          <block type="oled_drawnumber" id="532" inline="true">
-                            <value name="NUMBER">
-                              <block type="variables_get" id="604">
-                                <field name="VAR">landss</field>
+                          <block type="oled_setcursor" id="627" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="634">
+                                <field name="NUM">30</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="648">
+                                <field name="NUM">3</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_setcursor" id="627" inline="true">
-                                <value name="STARTX">
-                                  <block type="math_number" id="634">
-                                    <field name="NUM">30</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="math_number" id="648">
-                                    <field name="NUM">3</field>
+                              <block type="oled_drawnumber" id="532" inline="true">
+                                <value name="NUMBER">
+                                  <block type="variables_get" id="604">
+                                    <field name="VAR">landss</field>
                                   </block>
                                 </value>
                               </block>
