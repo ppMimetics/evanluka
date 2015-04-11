@@ -7,7 +7,7 @@
     </value>
     <statement name="DO">
       <block type="variables_set" id="173" inline="true">
-        <field name="VAR">water Ss</field>
+        <field name="VAR">watersSs</field>
         <value name="VALUE">
           <block type="sensor_spectrometer" id="171">
             <field name="LIGHT">BLUE</field>
@@ -19,7 +19,7 @@
               <block type="oled_drawnumber" id="272" inline="true">
                 <value name="NUMBER">
                   <block type="variables_get" id="320">
-                    <field name="VAR">water Ss</field>
+                    <field name="VAR">watersSs</field>
                   </block>
                 </value>
               </block>
