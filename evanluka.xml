@@ -87,9 +87,18 @@
             <statement name="DO">
               <block type="movement_reverse" id="708">
                 <next>
-                  <block type="movement_right" id="718">
+                  <block type="robot_delay" id="814" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="821">
+                        <field name="NUM">10000</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="movement_stop" id="812"></block>
+                      <block type="movement_right" id="718">
+                        <next>
+                          <block type="movement_stop" id="812"></block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>
