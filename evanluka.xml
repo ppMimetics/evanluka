@@ -1,4 +1,27 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_reverse" id="144" x="-185" y="204"></block>
-  <block type="movement_stop" id="164" x="332" y="218"></block>
+  <block type="movement_reverse" id="144" x="-172" y="228">
+    <next>
+      <block type="variables_set" id="173" inline="true">
+        <field name="VAR">item</field>
+        <value name="VALUE">
+          <block type="sensor_spectrometer" id="171">
+            <field name="LIGHT">BLUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="movement_stop" id="209">
+            <next>
+              <block type="controls_repeat" id="216" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="235">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
 </xml>
