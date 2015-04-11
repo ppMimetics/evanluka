@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="216" inline="true" x="-202" y="246">
+  <block type="controls_repeat" id="216" inline="true" x="-288" y="70">
     <value name="TIMES">
       <block type="math_number" id="242">
         <field name="NUM">100000000</field>
@@ -22,33 +22,47 @@
               </block>
             </value>
             <next>
-              <block type="oled_drawnumber" id="532" inline="true">
-                <value name="NUMBER">
-                  <block type="variables_get" id="604">
-                    <field name="VAR">landss</field>
-                  </block>
-                </value>
+              <block type="oled_cleardisplay" id="263">
                 <next>
-                  <block type="oled_cleardisplay" id="263">
+                  <block type="oled_setcursor" id="329" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="346">
+                        <field name="NUM">50</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="353">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="oled_setcursor" id="329" inline="true">
-                        <value name="STARTX">
-                          <block type="math_number" id="346">
-                            <field name="NUM">50</field>
-                          </block>
-                        </value>
-                        <value name="STARTY">
-                          <block type="math_number" id="353">
-                            <field name="NUM">0</field>
+                      <block type="oled_drawnumber" id="272" inline="true">
+                        <value name="NUMBER">
+                          <block type="variables_get" id="320">
+                            <field name="VAR">watersSs</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_drawnumber" id="272" inline="true">
+                          <block type="oled_drawnumber" id="532" inline="true">
                             <value name="NUMBER">
-                              <block type="variables_get" id="320">
-                                <field name="VAR">watersSs</field>
+                              <block type="variables_get" id="604">
+                                <field name="VAR">landss</field>
                               </block>
                             </value>
+                            <next>
+                              <block type="oled_setcursor" id="627" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="634">
+                                    <field name="NUM">30</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="648">
+                                    <field name="NUM">3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
