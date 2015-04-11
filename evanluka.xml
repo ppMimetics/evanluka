@@ -1,68 +1,73 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="688" x="-285" y="40">
+  <block type="multimedia_playwav" id="891" x="-282" y="18">
+    <field name="WAV">stop</field>
     <next>
-      <block type="controls_repeat" id="216" inline="true">
-        <value name="TIMES">
-          <block type="math_number" id="242">
-            <field name="NUM">30</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="variables_set" id="173" inline="true">
-            <field name="VAR">watersSs</field>
-            <value name="VALUE">
-              <block type="sensor_spectrometer" id="171">
-                <field name="LIGHT">BLUE</field>
+      <block type="movement_forward" id="688">
+        <next>
+          <block type="controls_repeat" id="216" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="242">
+                <field name="NUM">30</field>
               </block>
             </value>
-            <next>
-              <block type="variables_set" id="357" inline="true">
-                <field name="VAR">landss</field>
+            <statement name="DO">
+              <block type="variables_set" id="173" inline="true">
+                <field name="VAR">watersSs</field>
                 <value name="VALUE">
-                  <block type="sensor_spectrometer" id="392">
-                    <field name="LIGHT">RED</field>
+                  <block type="sensor_spectrometer" id="171">
+                    <field name="LIGHT">BLUE</field>
                   </block>
                 </value>
                 <next>
-                  <block type="oled_cleardisplay" id="263">
+                  <block type="variables_set" id="357" inline="true">
+                    <field name="VAR">landss</field>
+                    <value name="VALUE">
+                      <block type="sensor_spectrometer" id="392">
+                        <field name="LIGHT">RED</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="oled_setcursor" id="329" inline="true">
-                        <value name="STARTX">
-                          <block type="math_number" id="346">
-                            <field name="NUM">50</field>
-                          </block>
-                        </value>
-                        <value name="STARTY">
-                          <block type="math_number" id="353">
-                            <field name="NUM">0</field>
-                          </block>
-                        </value>
+                      <block type="oled_cleardisplay" id="263">
                         <next>
-                          <block type="oled_drawnumber" id="272" inline="true">
-                            <value name="NUMBER">
-                              <block type="variables_get" id="320">
-                                <field name="VAR">watersSs</field>
+                          <block type="oled_setcursor" id="329" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="346">
+                                <field name="NUM">50</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="353">
+                                <field name="NUM">0</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_setcursor" id="627" inline="true">
-                                <value name="STARTX">
-                                  <block type="math_number" id="634">
-                                    <field name="NUM">30</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="math_number" id="648">
-                                    <field name="NUM">3</field>
+                              <block type="oled_drawnumber" id="272" inline="true">
+                                <value name="NUMBER">
+                                  <block type="variables_get" id="320">
+                                    <field name="VAR">watersSs</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="oled_drawnumber" id="532" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="variables_get" id="604">
-                                        <field name="VAR">landss</field>
+                                  <block type="oled_setcursor" id="627" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="634">
+                                        <field name="NUM">30</field>
                                       </block>
                                     </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="648">
+                                        <field name="NUM">3</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="oled_drawnumber" id="532" inline="true">
+                                        <value name="NUMBER">
+                                          <block type="variables_get" id="604">
+                                            <field name="VAR">landss</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -74,45 +79,45 @@
                   </block>
                 </next>
               </block>
-            </next>
-          </block>
-        </statement>
-        <next>
-          <block type="controls_repeat" id="776" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="802">
-                <field name="NUM">3</field>
-              </block>
-            </value>
-            <statement name="DO">
-              <block type="movement_reverse" id="708">
-                <next>
-                  <block type="robot_delay" id="814" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="821">
-                        <field name="NUM">5000</field>
-                      </block>
-                    </value>
+            </statement>
+            <next>
+              <block type="controls_repeat" id="776" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="802">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="movement_reverse" id="708">
                     <next>
-                      <block type="movement_right" id="718">
+                      <block type="robot_delay" id="814" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="821">
+                            <field name="NUM">5000</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="robot_delay" id="823" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="840">
-                                <field name="NUM">2500</field>
-                              </block>
-                            </value>
+                          <block type="movement_right" id="718">
                             <next>
-                              <block type="movement_stop" id="833"></block>
+                              <block type="robot_delay" id="823" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="840">
+                                    <field name="NUM">2500</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_stop" id="833"></block>
+                                </next>
+                              </block>
                             </next>
                           </block>
                         </next>
                       </block>
                     </next>
                   </block>
-                </next>
+                </statement>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
