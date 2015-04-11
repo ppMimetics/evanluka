@@ -87,7 +87,11 @@
             <statement name="DO">
               <block type="movement_reverse" id="708">
                 <next>
-                  <block type="movement_right" id="718"></block>
+                  <block type="movement_right" id="718">
+                    <next>
+                      <block type="movement_stop" id="812"></block>
+                    </next>
+                  </block>
                 </next>
               </block>
             </statement>
