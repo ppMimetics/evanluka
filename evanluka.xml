@@ -103,7 +103,25 @@
                               </block>
                             </value>
                             <next>
-                              <block type="movement_stop" id="833"></block>
+                              <block type="oled_setcursor" id="1012" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="1019">
+                                    <field name="NUM">5</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="1026">
+                                    <field name="NUM">5</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_drawnumber" id="1069" inline="true">
+                                    <value name="NUMBER">
+                                      <block type="sensor_battery" id="936"></block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
                             </next>
                           </block>
                         </next>
@@ -118,4 +136,5 @@
       </block>
     </next>
   </block>
+  <block type="movement_stop" id="833" x="0" y="424"></block>
 </xml>
