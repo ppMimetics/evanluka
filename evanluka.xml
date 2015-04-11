@@ -1,20 +1,25 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_reverse" id="144" x="-172" y="228">
-    <next>
+  <block type="controls_repeat" id="216" inline="true" x="-202" y="246">
+    <value name="TIMES">
+      <block type="math_number" id="242">
+        <field name="NUM">99</field>
+      </block>
+    </value>
+    <statement name="DO">
       <block type="variables_set" id="173" inline="true">
-        <field name="VAR">item</field>
+        <field name="VAR">water Ss</field>
         <value name="VALUE">
           <block type="sensor_spectrometer" id="171">
             <field name="LIGHT">BLUE</field>
           </block>
         </value>
         <next>
-          <block type="movement_stop" id="209">
+          <block type="oled_cleardisplay" id="263">
             <next>
-              <block type="controls_repeat" id="216" inline="true">
-                <value name="TIMES">
-                  <block type="math_number" id="235">
-                    <field name="NUM">1</field>
+              <block type="oled_drawnumber" id="272" inline="true">
+                <value name="NUMBER">
+                  <block type="variables_get" id="320">
+                    <field name="VAR">water Ss</field>
                   </block>
                 </value>
               </block>
@@ -22,6 +27,6 @@
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
