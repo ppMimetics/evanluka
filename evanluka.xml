@@ -1,3 +1,4 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_reverse" id="70" x="255" y="213"></block>
+  <block type="movement_reverse" id="144" x="-185" y="204"></block>
+  <block type="movement_stop" id="164" x="332" y="218"></block>
 </xml>
